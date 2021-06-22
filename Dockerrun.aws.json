@@ -1,37 +1,37 @@
-// {
-//   "AWSEBDockerrunVersion": 2,
-//   "containerDefinitions": [
-//     {
-//       "name": "client",
-//       "image": "moshood002/multi-client",
-//       "hostname": "client",
-//       "essential": false
-//     },
-//     {
-//       "name": "server",
-//       "image": "moshood002/multi-server",
-//       "hostname": "api",
-//       "essential": false
-//     },
-//     {
-//       "name": "worker",
-//       "image": "moshood002/multi-worker",
-//       "hostname": "worker",
-//       "essential": false
-//     },
-//     {
-//       "name": "nginx",
-//       "image": "moshood002/multi-nginx",
-//       "hostname": "nginx",
-//       "essential": true,
-//       "portMappings" : [
-//         {
-//           "hostPort": 80,
-//           "containerPort": 80
-//         }
-//       ],
-//       "links": ["client", "server"]
-//     }
-//   ]
+{
+  "AWSEBDockerrunVersion": 2,
+  "containerDefinitions": [
+    {
+      "name": "client",
+      "image": "moshood002/multi-client",
+      "hostname": "client",
+      "essential": false
+    },
+    {
+      "name": "server",
+      "image": "moshood002/multi-server",
+      "hostname": "api",
+      "essential": false
+    },
+    {
+      "name": "worker",
+      "image": "moshood002/multi-worker",
+      "hostname": "worker",
+      "essential": false
+    },
+    {
+      "name": "nginx",
+      "image": "moshood002/multi-nginx",
+      "hostname": "nginx",
+      "essential": true,
+      "portMappings" : [
+        {
+          "hostPort": 80,
+          "containerPort": 80
+        }
+      ],
+      "links": ["client", "server"]
+    }
+  ]
 
-// }
+}
